@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="author" content="Michael Iskander">
+        <meta name="description" content="Completing the task assignment relating to the understadning of APIs. Utilising HTML, AJAX, PHP and jQuery">
+        <meta name="viewport" content="width=device-width, intial-scale=1">
+
+        <title>API Task</title>
+
+        <link href="libs/css/style.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <div id="preloader"></div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description of API</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Reverse Address Geocoding</td>
+                        <td>This API will return the nearest address for the given Latitude/Longitude.<br>
+                            <input type="number" id="latitude1" value="27.573474">
+                            <input type="number" id="longitude1" value="-99.438716">
+                        </td>
+                        <td>
+                            <button id="clickBtn1">Click here</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ocean</td>
+                        <td>This API will return a specific Ocean for the given Latitude/Longitude.<br>
+                            <input type="number" id="latitude2" value="38.822591">
+                            <input type="number" id="longitude2" value="-35.610942">
+                        </td>
+                        <td>
+                            <button id="clickBtn2">Click here</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Earthquake</td>
+                        <td>This API will return the strongest earthquake recorded given the North, East, South and West coordinates.<br>
+                          <input type="number" id="quakeNorth" value="44.1">
+                          <input type="number" id="quakeEast" value="-22.4">
+                          <input type="number" id="quakeSouth" value="-9.9">
+                          <input type="number" id="quakeWest" value="55.2">
+                        </td>
+                        <td>
+                            <button id="clickBtn3">Click here</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Results:</td>
+                        <td>
+                            <p id="results1"></p>
+                            <p id="results2"></p>
+                            <p id="results3"></p>
+                            <p id="results4"></p>
+                                                 </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        <script src="libs/js/jquery-2.2.3.min.js" type="application/javascript"></script>
+        <script src="libs/js/script.js" type="application/javascript"></script>
+
+    </body>
+
+</html>
