@@ -18,14 +18,14 @@ $('#clickBtn1').click(function() {
     },
     success: function(result) {
 
-      console.log(JSON.stringify(result));
+      console.log(result);
 
       if (result.status.name == "ok") {
 
-        $('#results1').html(result['data'][0]['street']);
-        $('#results2').html(result['data'][0]['locality']);
-        $('#results3').html(result['data'][0]['adminName1']);
-        $('#results4').html(result['data'][0]['countryCode']);
+        $('#results1').html(result['data']['street']);
+        $('#results2').html(result['data']['locality']);
+        $('#results3').html(result['data']['adminName1']);
+        $('#results4').html(result['data']['countryCode']);
 
       }
 
@@ -45,17 +45,19 @@ $('#clickBtn2').click(function() {
     type: 'POST',
     dataType: 'json',
     data: {
-      lat: $('#lat2').val(),
-      lng: $('#lng2').val()
+      lat: $('#latitude2').val(),
+      lng: $('#longitude2').val()
     },
     success: function(result) {
 
-      console.log(JSON.stringify(result));
+      console.log(result));
 
       if (result.status.name == "ok") {
 
-        $('#results1').html(result['data'][0]['name']);
-
+        $('#results1').html(result['data']['name']);
+        $('#results2').empty();
+        $('#results3').empty();
+        $('#results4').empty();
       }
 
     },
@@ -88,7 +90,7 @@ $('#clickBtn3').click(function() {
         $('#results1').html(result['data'][0]['datetime']);
         $('#results2').html(result['data'][0]['magnitude']);
         $('#results3').html(result['data'][0]['depth']);
-
+        $('#results4').empty();
       }
 
     },
